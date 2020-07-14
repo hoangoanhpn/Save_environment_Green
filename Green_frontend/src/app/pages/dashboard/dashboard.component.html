@@ -1,0 +1,94 @@
+<!--<div class="row">
+  <div class="col-md-12">
+    <div class="card ">
+      <div class="card-header ">
+        <h5 class="card-title">Sensors values</h5>
+        <p class="card-category">24 Hours performance</p>
+      </div>
+      <div class="card-body ">
+        <canvas id=chartHours width="400" height="100"></canvas>
+      </div>
+      <div class="card-footer ">
+        <hr>
+        <div class="stats">
+          <i class="fa fa-history"></i> Updated 3 minutes ago
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
+<div class="row">
+  <!--<div class="col-md-4">
+    <div class="card ">
+      <div class="card-header ">
+        <h5 class="card-title">Users Behavior</h5>
+        <p class="card-category">Last Campaign Performance</p>
+      </div>
+      <div class="card-body ">
+        <canvas id="chartEmail"></canvas>
+      </div>
+      <div class="card-footer ">
+        <div class="legend">
+          <i class="fa fa-circle text-primary"></i> Opened
+          <i class="fa fa-circle text-warning"></i> Read
+          <i class="fa fa-circle text-danger"></i> Deleted
+          <i class="fa fa-circle text-gray"></i> Unopened
+        </div>
+        <hr>
+        <div class="stats">
+          <i class="fa fa-calendar"></i> Number of emails sent
+        </div>
+      </div>
+    </div>
+  </div>-->
+  <div class="col-md-12">
+    <div class="card card-chart">
+      <div class="card-header">
+        <h5 class="card-title"></h5>
+        <p class="card-category">Line Chart with Points</p>
+      </div>
+      <div class="card-body">
+        <canvas id="speedChart" width="400" height="100"></canvas>
+      </div>
+      <div class="card-footer">
+
+
+        <div class="card-stats">
+          <i class="fa fa-check"></i> The data feed is updated once every 1 minute at most.
+        </div>
+
+        <a id="download" download="ChartImage.jpg" href="" class="btn btn-primary float-right bg-flat-color-1">
+          <i class="fa fa-download"></i>
+
+          <script>
+            function download() {
+              var canvas = $("#speedChart").ejChart("export");
+              this.href = canvas;
+            }
+            if (document.getElementById('download').addEventListener)
+              document.getElementById('download').addEventListener('click', download, false);
+            else
+              document.getElementById('download').attachEvent('onclick', download, false);
+          </script>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <li class="nav-item btn-rotate row" ngbDropdown placement="bottom-left">
+    <a class="nav-link col-lg-5" ngbDropdownToggle id="navbarDropdownMenuLink">
+      <p>Select device: {{this.myDev}}</p>
+      <i class="nc-icon nc-chart-bar-32"></i>
+    </a>
+    <div ngbDropdownMenu aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right col-lg-6">
+      <tr *ngFor="let dev of listDe; let j=index">
+        <td ngbDropdownItem (click)="select(dev)">{{dev}}</td>
+      </tr>
+    </div>
+  </li>
+</div>
+
+
+

@@ -1,0 +1,32 @@
+<div class="container">
+  <div class=tablee >
+    <table class="table table-hover" >
+      <i class='material-icons' id="closebtn" (click)="onClose()">close</i>
+      <thead>
+          <button class='btn btn-danger'(click)="onDelete(dataKey.deviceID)">
+            <i class='material-icons'>delete_outline</i>
+          </button>
+      </thead>
+
+      <thead>
+        <tr class="table-success"  >
+          <th></th>
+          <th class="namee" *ngFor="let name of nameMess; let j=index">{{name}}</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let content of contentMess; let j=index">
+          <td matTooltip="Tick chọn để xóa nhiều message, tuy nhiên chọn rồi là chọn luôn chứ chưa có bỏ chọn được :(((( Như đang sửa :(((((">
+            <input id="boxid" type="checkbox" (change)="selChk(content._id, j)">
+          </td>
+          <td *ngFor="let name of nameMess">
+            {{content[name]}}
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+</div>
+

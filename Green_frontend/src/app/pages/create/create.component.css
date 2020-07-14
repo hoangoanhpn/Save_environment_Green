@@ -1,0 +1,23 @@
+.container{
+  width: 1300px;
+}
+
+.card{
+  width: 1300px;
+  margin-left: -10%;
+}
+
+fieldset{
+  margin: 5%;
+}
+
+legend{
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: -3%;
+  font-weight: 700;
+}
+
+.sp{
+  margin-top: -0.75px;
+}

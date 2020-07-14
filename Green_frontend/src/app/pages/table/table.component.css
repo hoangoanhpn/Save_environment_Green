@@ -1,0 +1,49 @@
+.full-width-table {
+  width: 100%;
+}
+
+.mat-elevation-z8{
+  margin-top: 35px;
+}
+
+
+.breadcrumb-item{
+  color: black;
+}
+
+.content{
+  color: black;
+}
+
+.tablee{
+  margin: 2%;
+}
+
+a.create{
+  text-decoration: none;
+  color: white;
+}
+
+a.create:hover{
+  text-decoration: none;
+  color: #FAFAFA;
+}
+
+.red{
+  color: red;
+  font-size: small;
+}
+
+.blue{
+  color: blue;
+  font-size: small;
+}
+
+button.btn{
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+.aedit{
+  color: black;
+}

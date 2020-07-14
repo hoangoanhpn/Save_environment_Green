@@ -1,0 +1,45 @@
+
+  <a class="btn btn-success create" href="/#/create" routerLinkActive="router-link-active" >Create new device</a>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <div>
+          <table class="table">
+            <thead class="table-success">
+              <tr>
+                <th>Device Name</th>
+                <th>ID</th>
+                <th>Device ID</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody class="content">
+              <tr *ngFor="let hr of lstTable; let j=index">
+                <td>{{hr.deviceName}}</td>
+                <td>{{hr._id}}</td>
+                <td
+                  matTooltip="Nhấn vào để xem message các sensor"
+                  (click)="openInfo(hr)">{{hr.deviceID}}
+                </td>
+                <td>
+                  <i class='material-icons'
+                  (click)="Ondelete(hr.deviceID)">delete_outline</i>
+                </td>
+                <td>
+                  <a class="aedit" [href]="['/#/viewdetail/'+ hr.deviceID]">
+                    <i class='material-icons'>
+                      create
+                    </i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

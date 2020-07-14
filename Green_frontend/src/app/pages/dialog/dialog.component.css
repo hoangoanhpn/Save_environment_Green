@@ -1,0 +1,33 @@
+.tablee{
+  margin-left: 0%;
+}
+
+.namee{
+  text-transform: uppercase;
+}
+
+.table thead th {
+  position: sticky;
+  top: 0;
+}
+
+.table thead button {
+  position: sticky;
+}
+
+.btn{
+  margin-bottom: 20px;
+}
+
+.material-icons{
+  font-size: 20px;
+}
+
+#closebtn{
+  margin-top: -3%;
+  margin-left: 1080px;
+  z-index: 2;
+  position: absolute;
+  font-size: 25px;
+  opacity: 0.5;
+}
